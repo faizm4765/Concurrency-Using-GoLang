@@ -1,4 +1,4 @@
-![screenshot shows deadlock logs](image.png)
+![screenshot shows deadlock logs](images/image.png)
 
 
 <!-- To fix deadlock, either:
@@ -9,4 +9,4 @@
 
 <!-- But we want to avoid deadlock. Hence we will impose constraint that threads aqcuire resources in a given order thus eliminating cyclic dependency, hence no deadlock. -->
 
-![schreenshot shows how we avoid deadlock by imposing resource allocation in order](image-1.png)
+![schreenshot shows how we avoid deadlock by imposing resource allocation in order](images/image-1.png)
