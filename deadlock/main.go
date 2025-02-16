@@ -20,6 +20,11 @@ func main() {
 			resource1 := id
 			resource2 := (id + 1) % 6
 
+			// To avoid deadlock, we need to acquire the resources in order
+			if resource1 > resource2 {
+				resource1, resource2 = resource2, resource1
+			}
+
 			fmt.Printf("Thread %d trying to acquire resource %d\n", id, resource1)
 			mu[resource1].Lock()
 			fmt.Printf("Thread %d acquired resource %d\n", id, resource1)
